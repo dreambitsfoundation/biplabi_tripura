@@ -164,8 +164,9 @@
         <div class="col-sm-12 col-md-6">
           <b style="color: red">NEWS IN FOCUS</b>
           <br /><br />
-          {% for article in latest_articles %} {% if forloop.counter > 1 and
-          forloop.counter < 6 %}
+          {% for article in latest_articles %}
+          <!---->
+          {% if forloop.counter > 1 and forloop.counter < 6 %}
           <div class="card mb-3" style="max-width: 540px">
             <div class="row g-0">
               <div class="col-md-4">
