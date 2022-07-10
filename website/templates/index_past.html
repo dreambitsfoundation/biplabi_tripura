@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Janatar Kalam</title>
+    <title>Biplabi Tripura</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
@@ -33,9 +33,9 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link 
-      rel="stylesheet" 
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css" 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     {% load static %}
     <link
@@ -232,7 +232,12 @@
             class="input-field"
             method="GET"
             action="/search"
-            style="width: 30%; float:right; margin-top: 5px; margin-bottom: 0px"
+            style="
+              width: 30%;
+              float: right;
+              margin-top: 5px;
+              margin-bottom: 0px;
+            "
           >
             <i class="material-icons prefix">search</i>
             <input type="text" name="q" placeholder="Search" />
@@ -270,7 +275,12 @@
       <div class="row">
         <div class="col s12 center-align">
           {% if image and image.wide_image_id|length > 0 %}
-            <img src="{{image.wide_image_secure_url}}" class="img-fluid" alt="wide_ad_image" style="max-width: 100%; height: auto;">
+          <img
+            src="{{image.wide_image_secure_url}}"
+            class="img-fluid"
+            alt="wide_ad_image"
+            style="max-width: 100%; height: auto"
+          />
           {% endif %}
         </div>
         <div class="col l2 s12" style="height: 400px">
@@ -283,7 +293,13 @@
           />
           {% else %}
           <div
-            style="height: 400px; width: 200px; margin-top: 20px; background-color: lightgrey; text-align: center;"
+            style="
+              height: 400px;
+              width: 200px;
+              margin-top: 20px;
+              background-color: lightgrey;
+              text-align: center;
+            "
           >
             <div>
               <br /><br /><br /><br />
@@ -304,7 +320,7 @@
                     {% if article.images|length %}
                     <div
                       class="card-image"
-                      style="overflow-wrap: break-word; border-radius: 10px;"
+                      style="overflow-wrap: break-word; border-radius: 10px"
                     >
                       <img
                         src="{{article.images.0}}"
@@ -314,7 +330,7 @@
                       <a
                         href="articleView?id={{article.id}}"
                         class="card-title black text"
-                        style="text-decoration-color: white;"
+                        style="text-decoration-color: white"
                         >{{article.title}}</a
                       >
                     </div>
@@ -360,7 +376,13 @@
           />
           {% else %}
           <div
-            style="height: 400px; width: 200px; margin-top: 20px; background-color: lightgrey; text-align: center;"
+            style="
+              height: 400px;
+              width: 200px;
+              margin-top: 20px;
+              background-color: lightgrey;
+              text-align: center;
+            "
           >
             <div>
               <br /><br /><br /><br />
@@ -401,17 +423,20 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col s12 l3">
-          Ad videos. 
-          <br/>
+          Ad videos.
+          <br />
           {% for video in ad_videos %}
-           <iframe style="margin-top: 10px;" width="250" height="150" src="https://www.youtube.com/embed/{{video.link}}"></iframe>
+          <iframe
+            style="margin-top: 10px"
+            width="250"
+            height="150"
+            src="https://www.youtube.com/embed/{{video.link}}"
+          ></iframe>
           {% endfor %}
         </div>
         {% for article in latest_articles %} {% if forloop.counter == 1 %}
         <div class="col s12 l6">
-          <h3>
-            সর্বশেষ
-          </h3>
+          <h3>সর্বশেষ</h3>
           <p>খবর যে আপনাকে ভাবতে বাদ্ধ করে |</p>
           <img
             src="{{ article.photos.0.secure_urls }}"
@@ -438,8 +463,8 @@
             />
             <small style="margin-left: 10px">
               <a href="articleView?id={{article.id}}" style="color: black"
-            >{{ article.title }}</a
-          >
+                >{{ article.title }}</a
+              >
             </small>
           </div>
           <br />
@@ -505,7 +530,7 @@
         </div>
         {% endfor %}
       </div>
-      <hr/>
+      <hr />
     </div>
     <!-- End of section -->
 
@@ -513,9 +538,7 @@
     <div class="container">
       <br /><br />
       <h4>সর্বোচ্চ নজরে জনতার</h4>
-      <p>
-        সবচাইতে বেশি জনপ্রিয় খবর সমূহ |
-      </p>
+      <p>সবচাইতে বেশি জনপ্রিয় খবর সমূহ |</p>
       <div class="row">
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -547,9 +570,7 @@
 
     <!-- Beginning of farewell message -->
     <div class="container" style="color: grey">
-      <h4>
-        আমাদের আপনার বহুমূল্য সময় দেবার জন্য অসংখ্য ধন্যবাদ
-      </h4>
+      <h4>আমাদের আপনার বহুমূল্য সময় দেবার জন্য অসংখ্য ধন্যবাদ</h4>
       <p>
         সম্পাদক,
         <br />
@@ -559,7 +580,7 @@
     <!-- End of farewell message -->
 
     <!-- Beginning of footer section -->
-    <footer class="page-footer" style="background-color: rgb(138, 0, 0);">
+    <footer class="page-footer" style="background-color: rgb(138, 0, 0)">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -568,9 +589,7 @@
               height="80"
               width="140"
             />
-            <p class="grey-text text-lighten-4">
-              জনতার ভাষায়, জনতার সাথে |
-            </p>
+            <p class="grey-text text-lighten-4">জনতার ভাষায়, জনতার সাথে |</p>
             <p>
               <small class="grey-text text-lighten-4">
                 Vector images used in this application that are not part of the
@@ -602,14 +621,18 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2020 Janatar Kalam. All Rights Reserved
+          © 2020 Biplabi Tripura. All Rights Reserved
           <a class="grey-text text-lighten-4 right" href="http://devsiti.com"
             >A &lt;devsiti /&gt; production.</a
           >
         </div>
       </div>
     </footer>
-    <script data-ad-client="ca-pub-4854596723121864" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script
+      data-ad-client="ca-pub-4854596723121864"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -628,18 +651,18 @@
           rewind: true,
           breakpoints: {
             800: {
-              perView: 1
+              perView: 1,
             },
             480: {
-              perView: 1
-            }
-          }
+              perView: 1,
+            },
+          },
         });
         glide.mount();
         if (i == 0) {
           glide.update({
             autoplay: 4000,
-            hoverpause: true
+            hoverpause: true,
           });
         }
       }
@@ -653,18 +676,18 @@
           rewind: true,
           breakpoints: {
             800: {
-              perView: 1
+              perView: 1,
             },
             480: {
-              perView: 1
-            }
-          }
+              perView: 1,
+            },
+          },
         });
         glide.mount();
         if (i == 0) {
           glide.update({
             autoplay: 4000,
-            hoverpause: true
+            hoverpause: true,
           });
         }
       }
@@ -673,18 +696,18 @@
     <script src="{% static 'location.js' %}"></script>
     <script src="{% static 'index_page_functions.js' %}"></script>
     <script>
-      window.getCookie = function(name) {
+      window.getCookie = function (name) {
         var match = document.cookie.match(
           new RegExp("(^| )" + name + "=([^;]+)")
         );
         if (match) return match[2];
       };
-      $(function() {
+      $(function () {
         $("marquee")
-          .mouseover(function() {
+          .mouseover(function () {
             $(this).attr("scrollamount", 0);
           })
-          .mouseout(function() {
+          .mouseout(function () {
             $(this).attr("scrollamount", 5);
           });
       });
@@ -734,8 +757,8 @@
 
         navigation: {
           nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
+          prevEl: ".swiper-button-prev",
+        },
       });
     </script>
   </body>
