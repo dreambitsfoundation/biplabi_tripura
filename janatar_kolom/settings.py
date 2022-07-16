@@ -36,11 +36,9 @@ ALLOWED_HOSTS = [
     '192.168.43.43',
     '192.168.43.100',
     'localhost',
-    'janatarkalam.herokuapp.com',
-    'janatarkalam.com',
-    'www.janatarkalam.com',
-    '139.59.25.167',
     'biplabi-tripura.onrender.com',
+    'biplabitripura.com',
+    'www.biplabitripura.com'
 ]
 
 
